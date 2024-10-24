@@ -8,8 +8,8 @@
                         <i class="material-icons">keyboard_arrow_left</i>
                     </div>
                 </template>
-                <template v-for="(step, index) in steps">
-                    <div :class="['step', isStepActive(index, step)]" :key="index" :style="{width: `${100 / steps.length}%`}">
+                <template v-for="(step, index) in steps" :key="index">
+                    <div :class="['step', isStepActive(index, step)]" :style="{width: `${100 / steps.length}%`}">
                         <div class="circle">
                             <i class="material-icons md-18">
                                 {{ (step.completed) ? 'done' : step.icon }}
